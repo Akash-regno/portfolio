@@ -1,9 +1,21 @@
 export default function Contact() {
+  const marqueeItems = Array(6).fill("LET'S BUILD TOGETHER • ")
+
   return (
     <section className="contact-sec" id="contact">
-      <div className="wrapper">
-        <div className="contact-inner">
+      <div className="contact-marquee-wrapper reveal">
+        <div className="contact-marquee-track">
+          {marqueeItems.map((text, i) => (
+            <span key={i} className="contact-marquee-item">{text}</span>
+          ))}
+          {marqueeItems.map((text, i) => (
+            <span key={`dup-${i}`} className="contact-marquee-item">{text}</span>
+          ))}
+        </div>
+      </div>
 
+      <div className="wrapper" style={{ marginTop: '3rem' }}>
+        <div className="contact-inner">
           <div className="contact-left">
             <h2 className="contact-heading reveal">
               Let&apos;s<br />Build<br />Together.
@@ -39,7 +51,6 @@ export default function Contact() {
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </section>

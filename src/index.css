@@ -1223,6 +1223,50 @@ button {
 .contact-sec {
   padding: 120px 0;
   border-top: var(--border);
+  overflow-x: hidden;
+}
+
+.contact-marquee-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1.25rem 0;
+  border-top: var(--border);
+  border-bottom: var(--border);
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.contact-marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee-right-to-left 22s linear infinite;
+  will-change: transform;
+}
+
+.contact-marquee-item {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5.5vw, 5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  padding-right: 1.5rem;
+  color: var(--black);
+  opacity: 0.85;
+}
+
+@keyframes marquee-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .contact-inner {
