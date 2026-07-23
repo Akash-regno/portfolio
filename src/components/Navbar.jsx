@@ -26,12 +26,12 @@ export default function Navbar() {
       <div className="right-links">
         <GooeyNav
           items={navItems}
-          particleCount={15}
-          particleDistances={[90, 10]}
-          particleR={100}
-          initialActiveIndex={0}
-          animationTime={600}
-          timeVariance={300}
+          particleCount={12}
+          particleDistances={[80, 10]}
+          particleR={80}
+          initialActiveIndex={-1}
+          animationTime={500}
+          timeVariance={250}
           colors={[1, 2, 3, 1, 2, 3, 1, 4]}
         />
       </div>

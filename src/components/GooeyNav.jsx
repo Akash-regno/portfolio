@@ -9,7 +9,7 @@ const GooeyNav = ({
   particleR = 100,
   timeVariance = 300,
   colors = [1, 2, 3, 1, 2, 3, 1, 4],
-  initialActiveIndex = 0
+  initialActiveIndex = -1
 }) => {
   const containerRef = useRef(null);
   const navRef = useRef(null);
@@ -143,6 +143,14 @@ const GooeyNav = ({
 
   useEffect(() => {
     if (!navRef.current || !containerRef.current) return;
+    if (activeIndex === null || activeIndex === -1 || activeIndex === undefined) {
+      if (filterRef.current) filterRef.current.style.opacity = '0';
+      if (textRef.current) textRef.current.style.opacity = '0';
+      return;
+    }
+    if (filterRef.current) filterRef.current.style.opacity = '1';
+    if (textRef.current) textRef.current.style.opacity = '1';
+
     const activeLi = navRef.current.querySelectorAll('li')[activeIndex];
     if (activeLi) {
       updateEffectPosition(activeLi);
