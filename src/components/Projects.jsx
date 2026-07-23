@@ -1,3 +1,5 @@
+import DarkVeil from './DarkVeil'
+
 const PROJECTS = [
   {
     num: '01',
@@ -57,7 +59,19 @@ const PROJECTS = [
 export default function Projects() {
   return (
     <section className="dark-projects-sec" id="projects">
-      <div className="wrapper">
+      <div className="darkveil-container">
+        <DarkVeil
+          hueShift={0}
+          noiseIntensity={0.04}
+          scanlineIntensity={0.1}
+          speed={0.3}
+          scanlineFrequency={3}
+          warpAmount={2}
+          resolutionScale={1}
+        />
+      </div>
+
+      <div className="wrapper" style={{ position: 'relative', zIndex: 2 }}>
         <h2 className="section-heading reveal">Selected Works</h2>
         
         <div className="projects-page-list">
