@@ -1,17 +1,16 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import LoadingScreen from './components/LoadingScreen.jsx'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Skills from './components/Skills.jsx'
-import ProjectsPage from './components/ProjectsPage.jsx'
+import Projects from './components/Projects.jsx'
 import Experience from './components/Experience.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 
 export default function App() {
   const [loaded, setLoaded] = useState(false)
-  const [view, setView] = useState('home') // 'home' | 'projects'
 
   useEffect(() => {
     if (!loaded) {
@@ -27,18 +26,13 @@ export default function App() {
   return (
     <>
       <LoadingScreen onComplete={() => setLoaded(true)} />
-      <Navbar currentView={view} onViewChange={setView} />
+      <Navbar />
       <main>
-        {view === 'home' ? (
-          <>
-            <Hero loaded={loaded} />
-            <About />
-            <Skills />
-            <Experience />
-          </>
-        ) : (
-          <ProjectsPage />
-        )}
+        <Hero loaded={loaded} />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
         <Contact />
       </main>
       <Footer />

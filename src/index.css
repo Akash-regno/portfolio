@@ -1759,3 +1759,80 @@ body.dark-theme .exp-link:hover {
   color: var(--black);
   border-color: var(--white);
 }
+
+/* ============================================================
+   DARK PROJECTS SECTION (BLACK THEME IN-PAGE)
+   ============================================================ */
+.dark-projects-sec {
+  background-color: #050505;
+  color: var(--white);
+  padding: 120px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-projects-sec .section-heading {
+  color: var(--white);
+  margin-bottom: 4rem;
+}
+
+.dark-projects-sec .project-page-item {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-projects-sec .project-page-item:last-child {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-projects-sec .pp-title {
+  color: var(--white);
+}
+
+.dark-projects-sec .pp-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-projects-sec .proj-link {
+  color: var(--white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 2px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.dark-projects-sec .proj-link:hover {
+  border-bottom-color: var(--white);
+  opacity: 0.8;
+}
+
+.dark-projects-sec .pp-desc-bullet {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dark-projects-sec .pp-desc-bullet::before {
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.dark-projects-sec .ptag {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-projects-sec .pp-image-wrap {
+  border-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.dark-projects-sec .pp-image-wrap:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 520px) {
+  .dark-projects-sec {
+    padding: 64px 0;
+  }
+}
