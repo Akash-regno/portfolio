@@ -1,4 +1,5 @@
 import GooeyNav from './GooeyNav'
+import GlassSurface from './GlassSurface'
 
 export default function Navbar() {
   const navItems = [
@@ -21,7 +22,19 @@ export default function Navbar() {
         onClick={handleLogoClick}
         onKeyDown={e => e.key === 'Enter' && handleLogoClick()}
       >
-        Akash Ghosh
+        <GlassSurface
+          width="auto"
+          height="auto"
+          borderRadius={14}
+          backgroundOpacity={0.12}
+          blur={10}
+          distortionScale={-120}
+          className="logo-glass-surface"
+        >
+          <span style={{ padding: '0.4rem 0.85rem', fontWeight: 800, letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>
+            AKASH GHOSH
+          </span>
+        </GlassSurface>
       </div>
       <div className="right-links">
         <GooeyNav
