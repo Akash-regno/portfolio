@@ -39,9 +39,11 @@
 
 .gooey-nav-container nav ul {
   display: flex;
-  gap: 1.5em;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75em;
   list-style: none;
-  padding: 0 0.5em;
+  padding: 0;
   margin: 0;
   position: relative;
   z-index: 3;
@@ -59,11 +61,12 @@
     box-shadow 0.3s ease;
   box-shadow: 0 0 0.5px 1.5px transparent;
   color: white;
+  text-align: right;
 }
 
 .gooey-nav-container nav ul li a {
   display: inline-block;
-  padding: 0.5em 0.9em;
+  padding: 0.45em 0.85em;
   color: inherit;
   text-decoration: none;
 }
@@ -236,12 +239,11 @@
    ============================================================ */
 @media (max-width: 640px) {
   .gooey-nav-container nav ul {
-    gap: 0.3em;
-    padding: 0 0.2em;
+    gap: 0.45em;
   }
 
   .gooey-nav-container nav ul li a {
-    padding: 0.4em 0.6em;
+    padding: 0.35em 0.65em;
     font-size: 0.75rem;
     white-space: nowrap;
   }
@@ -249,13 +251,12 @@
 
 @media (max-width: 420px) {
   .gooey-nav-container nav ul {
-    gap: 0.15em;
-    padding: 0;
+    gap: 0.35em;
   }
 
   .gooey-nav-container nav ul li a {
-    padding: 0.35em 0.45em;
-    font-size: 0.68rem;
+    padding: 0.3em 0.55em;
+    font-size: 0.7rem;
     white-space: nowrap;
   }
 }

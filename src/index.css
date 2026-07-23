@@ -430,10 +430,10 @@ button {
   left: 0;
   width: 100%;
   z-index: 11;
-  padding: 1.75rem 2.5rem;
+  padding: 2.25rem 2.5rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1;
@@ -451,22 +451,21 @@ button {
 
 .right-links {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 @media (max-width: 1000px) {
   .navbar {
-    padding: 1.5rem 2rem;
+    padding: 1.75rem 2rem;
   }
 }
 
 @media (max-width: 640px) {
   .navbar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 0.6rem;
     padding: 1.25rem 1rem;
     font-size: 0.75rem;
     letter-spacing: 0.02em;
@@ -475,8 +474,9 @@ button {
   }
 
   .right-links {
-    width: 100%;
-    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 }
 
