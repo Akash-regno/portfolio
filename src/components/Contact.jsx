@@ -14,11 +14,11 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="wrapper" style={{ marginTop: '3rem' }}>
+      <div className="wrapper">
         <div className="contact-inner">
           <div className="contact-left">
             <h2 className="contact-heading reveal">
-              Let&apos;s<br />Build<br />Together.
+              Let&apos;s<br />Connect.
             </h2>
           </div>
 

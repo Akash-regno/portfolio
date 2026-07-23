@@ -1221,8 +1221,9 @@ button {
    CONTACT
    ============================================================ */
 .contact-sec {
-  padding: 120px 0;
+  padding: 160px 0 120px;
   border-top: var(--border);
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -1236,6 +1237,7 @@ button {
   overflow: hidden;
   white-space: nowrap;
   padding: 1.25rem 0;
+  margin-bottom: 4rem;
   border-top: var(--border);
   border-bottom: var(--border);
   user-select: none;
