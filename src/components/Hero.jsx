@@ -114,7 +114,8 @@ export default function Hero({ loaded }) {
             rel="noreferrer"
             className="hero-resume-link"
           >
-            View Resume ↗
+            <span className="resume-text">View Resume</span>
+            <span className="resume-icon">↗</span>
           </a>
         </div>
 
