@@ -1227,17 +1227,13 @@ button {
   overflow-x: hidden;
 }
 
-.contact-marquee-wrapper {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+.contact-marquee-container {
+  width: 100%;
+  max-width: calc(100vw - 220px);
   overflow: hidden;
   white-space: nowrap;
   padding: 1.25rem 0;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   border-top: var(--border);
   border-bottom: var(--border);
   user-select: none;
@@ -1247,19 +1243,28 @@ button {
 .contact-marquee-track {
   display: inline-flex;
   white-space: nowrap;
-  animation: marquee-right-to-left 22s linear infinite;
+  animation: marquee-right-to-left 25s linear infinite;
   will-change: transform;
 }
 
 .contact-marquee-item {
+  display: inline-block;
+  white-space: nowrap;
+  flex-shrink: 0;
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 5.5vw, 5rem);
+  font-size: clamp(2rem, 5vw, 4.5rem);
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
-  padding-right: 1.5rem;
+  letter-spacing: 0;
+  padding-right: 2rem;
   color: var(--black);
-  opacity: 0.85;
+  opacity: 0.9;
+}
+
+@media (max-width: 820px) {
+  .contact-marquee-container {
+    max-width: 100%;
+  }
 }
 
 @keyframes marquee-right-to-left {
