@@ -52,6 +52,23 @@ const PROJECTS = [
     liveId: 'hoos-live',
     image: '/p3.png',
   },
+  {
+    num: '04',
+    title: 'Clausewise',
+    subtitle: 'Self-Correcting Legal Contract Audit Engine',
+    desc: [
+      'Architected an Agentic RAG (Retrieval-Augmented Generation) system using LangGraph with a 5-agent LLM state machine (Researcher, Evaluator, Auditor, Critic, Composer); implemented a Corrective RAG (CRAG) loop with per-claim state freezing to re-retrieve and verify failing claims without re-running the full document draft.',
+      'Engineered a multi-hop structural RAG pipeline combining dense vector search (Pinecone) and sparse encoding with an explicit clause-tree & cross-reference knowledge graph, resolving defined terms and cross-clause legal obligations deterministically where standard semantic RAG fails.',
+      'Implemented a zero-hallucination verification triad (V1–V3) enforcing V1 Entailment (LLM-based RAG context grounding), V2 Citation Verification (deterministic character-offset validation directly against raw canonical text stores to prevent circular metadata evaluation), and V3 Attribution via strict Pydantic v2 type validation.',
+      'Built an asynchronous, multi-tenant FastAPI backend & React dashboard streaming live RAG retrieval logs and LLM agent decisions via Server-Sent Events (SSE) with Last-Event-ID reconnection, tenant data isolation (X-Tenant-Id), and an atomic 4-leg deletion saga for GDPR compliance.'
+    ],
+    tags: ['Agentic RAG', 'LangGraph', 'FastAPI', 'MongoDB', 'Pinecone', 'React'],
+    github: 'https://github.com/Akash-regno/Clausewise-Project',
+    live: 'https://clausewise-ai-p.vercel.app/',
+    githubId: 'clausewise-gh',
+    liveId: 'clausewise-live',
+    image: '/p4.png',
+  },
 ]
 
 export default function Projects() {
@@ -70,8 +87,8 @@ export default function Projects() {
                     <p className="pp-subtitle">{p.subtitle}</p>
                   </div>
                   <div className="pp-links">
-                    <a href={p.github} target="_blank" rel="noreferrer" className="proj-link" id={p.githubId}>GitHub ↗</a>
-                    <a href={p.live} target="_blank" rel="noreferrer" className="proj-link" id={p.liveId}>Live Demo ↗</a>
+                    {p.github && <a href={p.github} target="_blank" rel="noreferrer" className="proj-link" id={p.githubId}>GitHub ↗</a>}
+                    {p.live && <a href={p.live} target="_blank" rel="noreferrer" className="proj-link" id={p.liveId}>Live Demo ↗</a>}
                   </div>
                 </div>
 
@@ -86,7 +103,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <a href={p.live} target="_blank" rel="noreferrer" className="pp-image-wrap" id={`${p.liveId}-img`}>
+              <a href={p.live || p.github} target="_blank" rel="noreferrer" className="pp-image-wrap" id={`${p.liveId || p.githubId}-img`}>
                 <img src={p.image} alt={p.title} className="pp-image" />
               </a>
             </div>
